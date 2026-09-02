@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>PromptCraft</title>
+
+    <link rel="stylesheet"
+          href="/static/style.css">
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <header>
+
+        <h1>PromptCraft</h1>
+
+        <p>
+            Prompt-Driven Engineering Assistant
+        </p>
+
+        <div class="badge">
+            Ollama Local LLM
+        </div>
+
+    </header>
+
+
+    <div class="layout">
+
+
+        <!-- INPUT -->
+
+        <div class="card">
+
+            <h2>Engineering Assistant</h2>
+
+
+            <label>
+                Engineering Module
+            </label>
+
+            <select id="module">
+
+                <option>
+                    Code Generation & Explanation
+                </option>
+
+                <option>
+                    Automated Debugging Assistance
+                </option>
+
+                <option>
+                    Requirement-to-Documentation
+                </option>
+
+            </select>
+
+
+            <label>
+                Prompt Strategy
+            </label>
+
+            <select id="strategy">
+
+                <option>
+                    Zero-Shot
+                </option>
+
+                <option>
+                    Few-Shot
+                </option>
+
+                <option>
+                    Structured Reasoning
+                </option>
+
+            </select>
+
+
+            <label>
+                Engineering Task
+            </label>
+
+            <textarea
+                id="task"
+                placeholder="Enter your engineering task..."
+            ></textarea>
+
+
+            <label>
+                Few-Shot Examples
+            </label>
+
+            <textarea
+                id="examples"
+                placeholder="Enter examples when using Few-Shot..."
+            ></textarea>
+
+
+            <button
+                onclick="generate()">
+
+                Generate Response
+
+            </button>
+
+        </div>
+
+
+        <!-- OUTPUT -->
+
+        <div class="card">
+
+            <h2>Prompt Trace</h2>
+
+
+            <div class="box">
+
+                <h3>
+                    Constructed Prompt
+                </h3>
+
+                <pre id="prompt">
+Prompt will appear here...
+                </pre>
+
+            </div>
+
+
+            <div class="box">
+
+                <h3>
+                    Ollama Response
+                </h3>
+
+                <div id="response">
+
+                    Response will appear here...
+
+                </div>
+
+            </div>
+
+
+            <div class="metrics">
+
+
+                <div>
+
+                    <span>
+                        MODEL
+                    </span>
+
+                    <strong id="model">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        STRATEGY
+                    </span>
+
+                    <strong id="strategyResult">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        LATENCY
+                    </span>
+
+                    <strong id="latency">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        TOKENS
+                    </span>
+
+                    <strong id="tokens">
+                        -
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <footer>
+
+        PromptCraft © 2026
+
+    </footer>
+
+
+</div>
+
+
+<script src="/static/script.js">
+</script>
+
+</body>
+
+</html>
